@@ -17,16 +17,23 @@ public class Gen {
 			a[d] = c;
 
 		}
+		for (int v = 0; v < 95; v++) {
+			System.out.print(a[v]);
+
+		}
+		
+		
 		String str = new String();
 		int[] ints = new int[95];
 
-		for (int v = 0; v <= 95; v++) {
+		for (int v = 0; v < 95; v++) {
 			ints[v] = v;
 
 		}
+		
 		shuffleArray(ints);
 
-		for (d = 0; d <= 96; d++) {
+		for (d = 0; d < 95; d++) {
 			str = str + a[ints[d]];
 
 		}
