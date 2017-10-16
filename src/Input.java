@@ -18,24 +18,27 @@ public class Input {
 
 		String beta = Input.Find(alpha);
 		System.out.println(beta);
+		scan.close();
 	}
 
 	private static final int size = 127;
 
-	public static String Find(String alpha) throws java.io.FileNotFoundException {// needs to take the character at index x of alpha and replace it with the
-												// character at index x of ceta.
+	public static String Find(String alpha) throws java.io.FileNotFoundException {// needs to take the character at
+																					// index x of alpha and replace it
+																					// with the
+		// character at index x of ceta.
 
 		String ceta = Input.Gen();
 		String newn = "";
 		int a = 0;
-		while(a<alpha.length()) {
-		//for (int a = 0; a < alpha.length(); a++) {
+		while (a < alpha.length()) {
+			// for (int a = 0; a < alpha.length(); a++) {
 			newn = newn + ceta.charAt(a);
-			a+=1;
+			a += 1;
 		}
-		System.out.println(newn);
-		try(  PrintWriter out = new PrintWriter( "filename.txt" )  ){
-		    out.println( ceta );
+		// System.out.println(newn);
+		try (PrintWriter out = new PrintWriter("filename.txt")) {
+			out.println(alpha);
 		}
 		return newn;
 	}
